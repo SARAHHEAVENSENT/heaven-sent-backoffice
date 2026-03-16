@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="hsf-api-base" content="https://portal.thehsf.org.za/api" />
+  <title>Heaven Sent Foundation NGO | Donate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260307-5" />
+  <link rel="stylesheet" href="public-luxury.css?v=20260307-10" />
+</head>
+<body class="site-body luxury-site">
+  <div id="scrollProgress" aria-hidden="true"></div>
+  <header class="topbar luxury-topbar">
+    <a href="index.html" class="brand">
+      <img src="logo-heavensent.png" alt="Heaven Sent Foundation logo" class="brand-logo" />
+      <span class="brand-text">Heaven Sent Foundation NGO</span>
+    </a>
+    <nav class="nav-links luxury-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="objectives.html">Objectives</a>
+      <a href="team.html">Team</a>
+      <a href="impact.html">Impact</a>
+      <a href="publications.html">Publications</a>
+      <a href="schools.html">Schools</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="donate.html" class="is-active track-action" data-action="donate_click">Donate</a>
+      <a href="volunteer.html" class="track-action" data-action="volunteer_click">Volunteer</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main class="page-shell">
+    <section class="lux-section reveal-lux action-hub">
+      <div class="lux-section-head"><p class="eyebrow">Donations</p><h2>Donate Instantly and Track Your Impact</h2></div>
+      <section id="donate" class="action-panel">
+        <p class="muted">Choose once-off or monthly support, set your amount from R10, then continue to donation checkout.</p>
+
+        <div class="donation-tiers" role="group" aria-label="Suggested donation amounts">
+          <button type="button" class="tier-btn active" data-amount="10">R10</button>
+          <button type="button" class="tier-btn" data-amount="50">R50</button>
+          <button type="button" class="tier-btn" data-amount="100">R100</button>
+          <button type="button" class="tier-btn" data-amount="250">R250</button>
+        </div>
+
+        <div class="calc-controls">
+          <label>Donation Amount (ZAR)<input id="donationAmount" type="number" min="10" step="10" value="10" /></label>
+          <input id="donationRange" type="range" min="10" max="10000" step="10" value="10" />
+        </div>
+
+        <div class="calc-output">
+          <div><p>Estimated Kits</p><strong id="kitsOut">1</strong></div>
+          <div><p>Estimated Learners</p><strong id="learnersOut">1</strong></div>
+        </div>
+
+        <form id="donationForm" class="contact-form compact-form">
+          <fieldset class="frequency-switch" aria-label="Donation frequency">
+            <legend>Donation Type</legend>
+            <label class="freq-pill">
+              <input type="radio" name="frequency" value="Once-off" checked />
+              <span>Once-off</span>
+            </label>
+            <label class="freq-pill">
+              <input type="radio" name="frequency" value="Monthly" />
+              <span>Monthly</span>
+            </label>
+          </fieldset>
+
+          <fieldset id="monthlyMethodSwitch" class="frequency-switch is-hidden" aria-label="Monthly payment method">
+            <legend>Monthly Payment Method</legend>
+            <label class="freq-pill">
+              <input type="radio" name="paymentMethod" value="card" checked />
+              <span>Card Payment</span>
+            </label>
+            <label class="freq-pill">
+              <input type="radio" name="paymentMethod" value="debit-order" />
+              <span>Debit Order Signup</span>
+            </label>
+          </fieldset>
+
+          <div id="debitOrderFields" class="debit-order-grid is-hidden" aria-label="Debit order signup details">
+            <label>Account Holder Name<input name="accountHolder" id="accountHolder" /></label>
+            <label>Bank Name<input name="bankName" id="bankName" /></label>
+            <label>
+              Account Type
+              <select name="accountType" id="accountType">
+                <option value="">Select account type</option>
+                <option>Cheque / Current</option>
+                <option>Savings</option>
+                <option>Transmission</option>
+              </select>
+            </label>
+            <label>Account Number<input name="accountNumber" id="accountNumber" inputmode="numeric" /></label>
+            <label>Branch Code<input name="branchCode" id="branchCode" inputmode="numeric" /></label>
+            <label>
+              Preferred Debit Day
+              <select name="debitDay" id="debitDay">
+                <option value="">Select day</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+              </select>
+            </label>
+            <label class="checkbox-row debit-consent-row"><input type="checkbox" name="debitConsent" id="debitConsent" /> I authorize Heaven Sent Foundation to process monthly debit orders.</label>
+          </div>
+
+          <label class="checkbox-row donation-anon-row"><input type="checkbox" id="anonymousDonor" name="anonymousDonor" /> Donate as anonymous donor</label>
+          <label id="donorNameWrap">Full Name<input id="donorName" name="name" required /></label>
+          <label id="donorEmailWrap">Email<input id="donorEmail" name="email" type="email" required /></label>
+          <label>
+            Donation Purpose
+            <select name="purpose" id="purposeSelect" required>
+              <option value="">Select purpose</option>
+              <option>Hygiene kits</option>
+              <option>Menstrual health support</option>
+              <option>Crisis care</option>
+              <option>General program support</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label id="purposeOtherWrap" class="is-hidden">
+            Other Purpose
+            <input name="purposeOther" id="purposeOther" placeholder="Type your donation purpose" />
+          </label>
+          <input type="hidden" name="amount" id="donationAmountHidden" value="10" />
+          <button type="submit" class="btn">Proceed To Donation</button>
+        </form>
+      </section>
+    </section>
+  </main>
+  <a class="floating-whatsapp" href="https://wa.me/27712447875" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+  <footer class="footer luxury-footer"><p>Copyright 2026 Heaven Sent Foundation NGO.</p></footer>
+  <script src="site.js?v=20260308-1"></script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+﻿{
+  "name": "heaven-sent-foundation-platform",
+  "version": "1.0.0",
+  "description": "Public NGO website and back-office platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "prisma": "prisma",
+    "db:migrate": "prisma migrate deploy",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.1",
+    "sqlite3": "^5.1.7",
+    "twilio": "^5.5.3"
+  },
+  "devDependencies": {
+    "prisma": "^5.22.0"
+  }
+}

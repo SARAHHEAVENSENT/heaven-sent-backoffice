@@ -1,0 +1,26 @@
+UPLOAD THIS WHOLE FOLDER AS YOUR NODE APP.
+
+Recommended server folder name:
+hsf-app
+
+Inside the server, keep these files together in one folder:
+- app.js
+- server.js
+- package.json
+- package-lock.json
+- ngo.db
+- all html/css/js/image files
+
+After upload:
+1. Set the Node application root to this folder.
+2. Set startup file to app.js.
+3. Run npm install.
+4. Start or restart the Node app.
+5. Test:
+   /healthz
+   /api/public/dashboard
+   /backoffice.html
+
+Admin login:
+- username: admin
+- password: ChangeMe123!

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="hsf-api-base" content="https://portal.thehsf.org.za/api" />
+  <title>Heaven Sent Foundation NGO | Volunteer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260307-5" />
+  <link rel="stylesheet" href="public-luxury.css?v=20260307-10" />
+</head>
+<body class="site-body luxury-site">
+  <div id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="topbar luxury-topbar">
+    <a href="index.html" class="brand">
+      <img src="logo-heavensent.png" alt="Heaven Sent Foundation logo" class="brand-logo" />
+      <span class="brand-text">Heaven Sent Foundation NGO</span>
+    </a>
+    <nav class="nav-links luxury-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="objectives.html">Objectives</a>
+      <a href="team.html">Team</a>
+      <a href="impact.html">Impact</a>
+      <a href="publications.html">Publications</a>
+      <a href="schools.html">Schools</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="donate.html" class="track-action" data-action="donate_click">Donate</a>
+      <a href="volunteer.html" class="is-active track-action" data-action="volunteer_click">Volunteer</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="lux-section reveal-lux action-hub">
+      <div class="lux-section-head">
+        <p class="eyebrow">Volunteer</p>
+        <h2>Choose What You Want To Submit</h2>
+      </div>
+
+      <div class="choice-grid" role="tablist" aria-label="Volunteer or request selection">
+        <button type="button" class="choice-btn active" data-target="volunteer-panel">Volunteer Application</button>
+        <button type="button" class="choice-btn" data-target="general-panel">Send General Request</button>
+      </div>
+
+      <section id="volunteer-panel" class="choice-panel action-panel">
+        <p class="muted">Choose your role and submit your volunteer application.</p>
+        <div class="role-grid">
+          <article class="panel-card role-card" data-role="Receiver"><h4>Receiver</h4><p>Receive and record goods from donors.</p></article>
+          <article class="panel-card role-card" data-role="Packer"><h4>Packer</h4><p>Package products into dignity kits.</p></article>
+          <article class="panel-card role-card" data-role="Transporter"><h4>Transporter</h4><p>Move goods between donors and schools.</p></article>
+        </div>
+        <form id="volunteerForm" class="contact-form compact-form">
+          <label>Full Name<input name="name" required /></label>
+          <label>Email<input name="email" type="email" required /></label>
+          <label>Preferred Role<input name="role" id="preferredRole" placeholder="e.g. Packer or your own role" required /></label>
+          <label>What would you like to do? (optional)<textarea name="contribution" rows="3" placeholder="Write your volunteer idea here."></textarea></label>
+          <label>Availability<textarea name="availability" rows="3" required></textarea></label>
+          <button type="submit" class="btn">Submit Volunteer Application</button>
+        </form>
+      </section>
+
+      <section id="general-panel" class="choice-panel action-panel is-hidden">
+        <p class="muted">Use this for partnership or any general request. Schools and sponsors can also use their dedicated pages in the navigation above.</p>
+        <form id="publicForm" class="contact-form compact-form">
+          <label>Full Name<input type="text" name="name" required /></label>
+          <label>Email<input type="email" name="email" required /></label>
+          <label>
+            I am interested in
+            <select name="interest" required>
+              <option value="">Select one</option>
+              <option>Volunteer support</option>
+              <option>Donate toiletries</option>
+              <option>Sponsor a school</option>
+              <option>Request support for learners</option>
+            </select>
+          </label>
+          <label>Message<textarea rows="4" name="message" required></textarea></label>
+          <button type="submit" class="btn">Send Request</button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <a class="floating-whatsapp" href="https://wa.me/27712447875" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+  <footer class="footer luxury-footer"><p>Copyright 2026 Heaven Sent Foundation NGO.</p></footer>
+  <script src="site.js?v=20260308-1"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

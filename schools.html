@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="hsf-api-base" content="https://portal.thehsf.org.za/api" />
+  <title>Heaven Sent Foundation NGO | Schools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260307-5" />
+  <link rel="stylesheet" href="public-luxury.css?v=20260307-10" />
+</head>
+<body class="site-body luxury-site">
+  <div id="scrollProgress" aria-hidden="true"></div>
+  <header class="topbar luxury-topbar">
+    <a href="index.html" class="brand">
+      <img src="logo-heavensent.png" alt="Heaven Sent Foundation logo" class="brand-logo" />
+      <span class="brand-text">Heaven Sent Foundation NGO</span>
+    </a>
+    <nav class="nav-links luxury-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="objectives.html">Objectives</a>
+      <a href="team.html">Team</a>
+      <a href="impact.html">Impact</a>
+      <a href="publications.html">Publications</a>
+      <a href="schools.html" class="is-active">Schools</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="donate.html" class="track-action" data-action="donate_click">Donate</a>
+      <a href="volunteer.html" class="track-action" data-action="volunteer_click">Volunteer</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main class="page-shell">
+    <section class="lux-hero reveal-lux">
+      <div class="hero-copy">
+        <p class="eyebrow">School Support</p>
+        <h1>Register A School For Monthly Hygiene Support</h1>
+        <p class="hero-text">If your school serves learners facing hygiene poverty, use this form to apply for support. Our team reviews each application and plans outreach based on urgency, learner numbers, and monthly capacity.</p>
+        <div class="hero-actions">
+          <a href="#school-application" class="btn">Apply Now</a>
+          <a href="contact.html" class="btn btn-outline">Ask A Question</a>
+        </div>
+      </div>
+      <div class="feature-visual">
+        <img src="https://cdn.pixabay.com/photo/2022/10/17/11/38/children-7527411_640.jpg" alt="African school children in a classroom setting" />
+      </div>
+    </section>
+
+    <section id="school-application" class="lux-section reveal-lux action-hub">
+      <div class="lux-section-head">
+        <p class="eyebrow">Application Form</p>
+        <h2>School Signup For Support</h2>
+      </div>
+      <div class="action-grid">
+        <section class="action-panel">
+          <p class="muted">Complete the school details below. This goes directly into the Heaven Sent Foundation back office for review.</p>
+          <form id="schoolForm" class="contact-form compact-form">
+            <label>School Name<input name="schoolName" required /></label>
+            <label>Contact Person<input name="contactName" required /></label>
+            <label>Email<input name="email" type="email" required /></label>
+            <label>Phone / WhatsApp<input name="phone" type="tel" required /></label>
+            <label>
+              Province
+              <select name="province" required>
+                <option value="">Select province</option>
+                <option>Eastern Cape</option>
+                <option>Free State</option>
+                <option>Gauteng</option>
+                <option>KwaZulu-Natal</option>
+                <option>Limpopo</option>
+                <option>Mpumalanga</option>
+                <option>North West</option>
+                <option>Northern Cape</option>
+                <option>Western Cape</option>
+              </select>
+            </label>
+            <label>Town / Area<input name="town" required /></label>
+            <label>Grades Served<input name="grades" placeholder="e.g. Grade 4 to Grade 12" required /></label>
+            <label>Number of Learners Needing Support<input name="learners" type="number" min="1" required /></label>
+            <label>Current Challenge<textarea name="need" rows="4" placeholder="Describe the hygiene and toiletry needs at your school." required></textarea></label>
+            <label>Urgency Level<select name="urgency" required><option value="">Select urgency</option><option>Urgent</option><option>High</option><option>Moderate</option><option>Planned support</option></select></label>
+            <label>Existing Facilities / Notes<textarea name="facilities" rows="3" placeholder="Optional notes about water access, toilets, or storage."></textarea></label>
+            <button type="submit" class="btn">Submit School Application</button>
+          </form>
+        </section>
+        <section class="action-panel">
+          <h3>What We Review</h3>
+          <ul class="list">
+            <li>School location and community vulnerability</li>
+            <li>Number of learners needing support</li>
+            <li>Urgency of toiletries and menstrual health needs</li>
+            <li>Ability to deliver support consistently and with dignity</li>
+          </ul>
+          <div class="cards-2" style="margin-top:0.9rem;">
+            <article class="panel-card">
+              <h3>Monthly Delivery Focus</h3>
+              <p>We prioritize ongoing support over one-off handovers whenever resources allow.</p>
+            </article>
+            <article class="panel-card">
+              <h3>Menstrual Health Support</h3>
+              <p>Girls can be supported with sanitary products and educational talks.</p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="lux-section reveal-lux">
+      <div class="lux-section-head">
+        <p class="eyebrow">What Happens Next</p>
+        <h2>After You Apply</h2>
+      </div>
+      <div class="cards-2">
+        <article class="panel-card"><h3>Step 1</h3><p>Your request is logged immediately in the back office for the team to review.</p></article>
+        <article class="panel-card"><h3>Step 2</h3><p>We assess urgency, learner reach, stock availability, and possible delivery scheduling.</p></article>
+        <article class="panel-card"><h3>Step 3</h3><p>The team contacts your school to confirm details and discuss the support plan.</p></article>
+        <article class="panel-card"><h3>Step 4</h3><p>If approved, the school is added into planning for dignity-kit or toiletry distribution.</p></article>
+      </div>
+      <p class="notice">Need urgent clarification first? Use <a href="mailto:info@thehsf.org.za">info@thehsf.org.za</a> or WhatsApp <a href="https://wa.me/27712447875" target="_blank" rel="noreferrer">071 244 7875</a>.</p>
+    </section>
+  </main>
+  <a class="floating-whatsapp" href="https://wa.me/27712447875" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+  <footer class="footer luxury-footer"><p>Copyright 2026 Heaven Sent Foundation NGO.</p></footer>
+  <script src="site.js?v=20260308-1"></script>
+</body>
+</html>

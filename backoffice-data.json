@@ -1,0 +1,437 @@
+{
+  "exportedAt": "2026-03-16T20:14:16.709Z",
+  "tables": {
+    "users": [
+      {
+        "id": 1,
+        "fullName": "System Administrator",
+        "username": "admin",
+        "passwordHash": "9a4aabf0e5cf71cae2cea646613ce7e2a5919fa758e56819704be25a3a2c1f0b",
+        "role": "admin",
+        "isActive": 1,
+        "lastLogin": "2026-03-07T22:13:13.847Z",
+        "updatedAt": "2026-03-07T22:13:13.847Z"
+      },
+      {
+        "id": 2,
+        "fullName": "Sarah Mpuru",
+        "username": "sarah.mpuru",
+        "passwordHash": "5826ca9ba601ea29138017a4e2a45870edaae980b871d65d9d2f0a27cc840a71",
+        "role": "member",
+        "isActive": 1,
+        "lastLogin": "2026-03-07T15:57:03.797Z",
+        "updatedAt": "2026-03-07T15:57:03.797Z"
+      },
+      {
+        "id": 3,
+        "fullName": "Hope Makgopa",
+        "username": "hope.makgopa",
+        "passwordHash": "5826ca9ba601ea29138017a4e2a45870edaae980b871d65d9d2f0a27cc840a71",
+        "role": "member",
+        "isActive": 1,
+        "lastLogin": "2026-03-06T19:32:49.848Z",
+        "updatedAt": "2026-03-06T19:32:49.848Z"
+      },
+      {
+        "id": 4,
+        "fullName": "Morongwa Mpuru",
+        "username": "morongwa.mpuru",
+        "passwordHash": "5826ca9ba601ea29138017a4e2a45870edaae980b871d65d9d2f0a27cc840a71",
+        "role": "member",
+        "isActive": 1,
+        "lastLogin": "2026-03-06T19:32:49.866Z",
+        "updatedAt": "2026-03-06T19:32:49.866Z"
+      },
+      {
+        "id": 5,
+        "fullName": "Antoney Mabela",
+        "username": "antoney.mabela",
+        "passwordHash": "5826ca9ba601ea29138017a4e2a45870edaae980b871d65d9d2f0a27cc840a71",
+        "role": "viewer",
+        "isActive": 1,
+        "lastLogin": "2026-03-06T19:32:49.882Z",
+        "updatedAt": "2026-03-06T19:32:49.882Z"
+      }
+    ],
+    "team_members": [
+      {
+        "id": 2,
+        "name": "Hope Makgopa",
+        "role": "Community Operations",
+        "bio": "A qualified chef supporting nutrition-sensitive care and dignity-focused outreach.",
+        "photoUrl": "assets/team/mohlago.png",
+        "sortOrder": 1,
+        "updatedAt": "2026-03-16T18:25:14.127Z"
+      },
+      {
+        "id": 3,
+        "name": "Sarah Mpuru",
+        "role": "Education Support",
+        "bio": "A qualified teacher focused on learner confidence and attendance outcomes.",
+        "photoUrl": "assets/team/sarah.jpeg",
+        "sortOrder": 2,
+        "updatedAt": "2026-03-16T18:25:14.127Z"
+      },
+      {
+        "id": 4,
+        "name": "Morongwa Mpuru",
+        "role": "Social Support",
+        "bio": "A qualified social worker strengthening family follow-up and beneficiary care.",
+        "photoUrl": "assets/team/morongwa.png",
+        "sortOrder": 3,
+        "updatedAt": "2026-03-16T18:25:14.127Z"
+      },
+      {
+        "id": 5,
+        "name": "Bongiwe Mdluli",
+        "role": "Learner & Sponsor Support",
+        "bio": "Responsible for learner and sponsor support.",
+        "photoUrl": "assets/team/bongi.png",
+        "sortOrder": 4,
+        "updatedAt": "2026-03-16T19:16:31.914Z"
+      }
+    ],
+    "gallery_items": [
+      {
+        "id": 1,
+        "imageUrl": "https://cdn.pixabay.com/photo/2022/10/17/11/38/children-7527411_640.jpg",
+        "caption": "Support that keeps learners in school.",
+        "altText": "African children receiving support",
+        "sortOrder": 1,
+        "updatedAt": "2026-03-06T17:56:06.251Z"
+      },
+      {
+        "id": 2,
+        "imageUrl": "https://cdn.pixabay.com/photo/2019/12/05/17/02/child-4675664_640.jpg",
+        "caption": "Dignity-centered outreach in vulnerable communities.",
+        "altText": "African child in under-resourced environment",
+        "sortOrder": 2,
+        "updatedAt": "2026-03-06T17:56:06.251Z"
+      },
+      {
+        "id": 3,
+        "imageUrl": "https://cdn.pixabay.com/photo/2023/03/16/03/02/african-7855837_640.jpg",
+        "caption": "Every child deserves hygiene dignity and care.",
+        "altText": "African child portrait",
+        "sortOrder": 3,
+        "updatedAt": "2026-03-06T17:56:06.251Z"
+      }
+    ],
+    "interactions": [
+      {
+        "id": 1,
+        "date": "2026-03-05",
+        "name": "HOPE",
+        "email": "Antoneymabela@gmail.com",
+        "interest": "Donate toiletries",
+        "message": "1000 toiltries"
+      },
+      {
+        "id": 2,
+        "date": "2026-03-05",
+        "name": "nalwedi",
+        "email": "Antoneymabela@gmail.com",
+        "interest": "Donation: Hygiene kits",
+        "message": "Donation pledge of R500 for Hygiene kits."
+      },
+      {
+        "id": 3,
+        "date": "2026-03-05",
+        "name": "naledi",
+        "email": "Antoneymabela@gmail.com",
+        "interest": "Volunteer: cook",
+        "message": "Volunteer availability: hi i am interstet"
+      },
+      {
+        "id": 4,
+        "date": "2026-03-05",
+        "name": "HOPE",
+        "email": "Antoneymabela@gmail.com",
+        "interest": "Volunteer time",
+        "message": "TEST MIC"
+      },
+      {
+        "id": 5,
+        "date": "2026-03-05",
+        "name": "nalwedi",
+        "email": "Antoneymabela@gmail.com",
+        "interest": "Donation: General program support",
+        "message": "Donation pledge of R100 for General program support."
+      },
+      {
+        "id": 6,
+        "date": "2026-03-06",
+        "name": "HOPE",
+        "email": "Antoneymabela@gmail.com",
+        "interest": "Donation (Once-off): Crisis care",
+        "message": "Once-off donation pledge of R10000 for Crisis care."
+      },
+      {
+        "id": 7,
+        "date": "2026-03-06",
+        "name": "sarah mpuru",
+        "email": "sarah@gmail.com",
+        "interest": "Volunteer: Transporter",
+        "message": "Volunteer availability: on monday the 15th of October\nVolunteer contribution: i would like to transport the iterms"
+      },
+      {
+        "id": 8,
+        "date": "2026-03-06",
+        "name": "Anonymous Donor",
+        "email": "anonymous@heavensent.local",
+        "interest": "Donation (Once-off): Hygiene kits",
+        "message": "Once-off donation pledge of R250 for Hygiene kits. Donor type: Anonymous."
+      },
+      {
+        "id": 9,
+        "date": "2026-03-06",
+        "name": "HOPE",
+        "email": "Antoneymabela@gmail.com",
+        "interest": "Donation (Once-off): Crisis care",
+        "message": "Once-off donation pledge of R10000 for Crisis care. Donor type: Named."
+      },
+      {
+        "id": 10,
+        "date": "2026-03-06",
+        "name": "Antoney Mabela",
+        "email": "Antoneymabela@gmail.com",
+        "interest": "Donation (Once-off): Crisis care",
+        "message": "Once-off donation pledge of R10 for Crisis care. Donor type: Named."
+      },
+      {
+        "id": 11,
+        "date": "2026-03-06",
+        "name": "Antoney Mabela",
+        "email": "Antoneymabela@gmail.com",
+        "interest": "Donation (Once-off): Crisis care",
+        "message": "Once-off donation pledge of R10 for Crisis care. Donor type: Named."
+      },
+      {
+        "id": 12,
+        "date": "2026-03-06",
+        "name": "Anonymous Donor",
+        "email": "anonymous@heavensent.local",
+        "interest": "Debit Order Signup (Monthly): General program support",
+        "message": "Monthly debit order signup of R100000569 for General program support. Donor type: Anonymous. Account holder: Antoney Mabela. Bank: capitec. Account type: Savings. Account number: ****0549. Branch code: 4000. Debit day: 15."
+      },
+      {
+        "id": 13,
+        "date": "2026-03-07",
+        "name": "PRINCIPA LIKO",
+        "email": "tonemabs499@gmail.com",
+        "interest": "School Signup: Hygiene Support",
+        "message": "School: SEAGOTLE HIGH\nContact person: PRINCIPA LIKO\nPhone: 0731050321\nLocation: LORRIAINE, Limpopo\nGrades: GRADE 5\nLearners: 50\nUrgency: Urgent\nFacilities: PLEASE HELP\nNeed: THEY NEED SCHOOL UNIFORM"
+      }
+    ],
+    "kpis": [
+      {
+        "id": 1,
+        "kitsDistributed": 10,
+        "beneficiariesServed": 50,
+        "schoolPartners": 1,
+        "updatedAt": "2026-03-05T20:18:19.680Z"
+      }
+    ],
+    "inventory_transactions": [],
+    "metrics": [
+      {
+        "key": "pageVisits",
+        "value": 49
+      },
+      {
+        "key": "donate_click",
+        "value": 17
+      },
+      {
+        "key": "volunteer_click",
+        "value": 19
+      },
+      {
+        "key": "form_submissions",
+        "value": 13
+      }
+    ],
+    "actions": [
+      {
+        "id": 1,
+        "type": "donate_click",
+        "createdAt": "2026-03-05T19:39:03.803Z"
+      },
+      {
+        "id": 2,
+        "type": "donate_click",
+        "createdAt": "2026-03-05T19:39:05.505Z"
+      },
+      {
+        "id": 3,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-05T19:39:06.431Z"
+      },
+      {
+        "id": 4,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-05T19:39:08.029Z"
+      },
+      {
+        "id": 5,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-05T19:39:08.249Z"
+      },
+      {
+        "id": 6,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-05T20:08:03.954Z"
+      },
+      {
+        "id": 7,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-05T20:09:27.488Z"
+      },
+      {
+        "id": 8,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-05T21:15:30.289Z"
+      },
+      {
+        "id": 9,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-05T21:31:04.643Z"
+      },
+      {
+        "id": 10,
+        "type": "donate_click",
+        "createdAt": "2026-03-05T21:34:42.635Z"
+      },
+      {
+        "id": 11,
+        "type": "donate_click",
+        "createdAt": "2026-03-06T18:07:52.417Z"
+      },
+      {
+        "id": 12,
+        "type": "donate_click",
+        "createdAt": "2026-03-06T18:16:00.266Z"
+      },
+      {
+        "id": 13,
+        "type": "donate_click",
+        "createdAt": "2026-03-06T18:49:20.956Z"
+      },
+      {
+        "id": 14,
+        "type": "donate_click",
+        "createdAt": "2026-03-06T18:52:45.008Z"
+      },
+      {
+        "id": 15,
+        "type": "donate_click",
+        "createdAt": "2026-03-06T18:54:57.184Z"
+      },
+      {
+        "id": 16,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-06T20:38:42.379Z"
+      },
+      {
+        "id": 17,
+        "type": "donate_click",
+        "createdAt": "2026-03-06T20:39:09.939Z"
+      },
+      {
+        "id": 18,
+        "type": "donate_click",
+        "createdAt": "2026-03-06T20:41:17.055Z"
+      },
+      {
+        "id": 19,
+        "type": "donate_click",
+        "createdAt": "2026-03-06T21:06:50.046Z"
+      },
+      {
+        "id": 20,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-06T21:15:56.920Z"
+      },
+      {
+        "id": 21,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-07T13:52:21.464Z"
+      },
+      {
+        "id": 22,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-07T14:44:06.142Z"
+      },
+      {
+        "id": 23,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-07T14:55:34.530Z"
+      },
+      {
+        "id": 24,
+        "type": "donate_click",
+        "createdAt": "2026-03-07T15:32:00.351Z"
+      },
+      {
+        "id": 25,
+        "type": "donate_click",
+        "createdAt": "2026-03-07T15:41:50.617Z"
+      },
+      {
+        "id": 26,
+        "type": "donate_click",
+        "createdAt": "2026-03-07T15:54:42.387Z"
+      },
+      {
+        "id": 27,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-07T15:54:44.933Z"
+      },
+      {
+        "id": 28,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-07T16:03:16.050Z"
+      },
+      {
+        "id": 29,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-07T16:03:35.018Z"
+      },
+      {
+        "id": 30,
+        "type": "donate_click",
+        "createdAt": "2026-03-07T16:03:37.692Z"
+      },
+      {
+        "id": 31,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-07T16:37:28.409Z"
+      },
+      {
+        "id": 32,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-07T16:48:32.194Z"
+      },
+      {
+        "id": 33,
+        "type": "donate_click",
+        "createdAt": "2026-03-07T17:52:29.220Z"
+      },
+      {
+        "id": 34,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-07T17:52:32.013Z"
+      },
+      {
+        "id": 35,
+        "type": "donate_click",
+        "createdAt": "2026-03-07T17:58:08.782Z"
+      },
+      {
+        "id": 36,
+        "type": "volunteer_click",
+        "createdAt": "2026-03-07T17:58:12.543Z"
+      }
+    ]
+  }
+}

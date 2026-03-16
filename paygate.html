@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heaven Sent Foundation | Secure Dummy PayGate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260306-6" />
+  <link rel="stylesheet" href="public-luxury.css?v=20260306-6" />
+</head>
+<body class="site-body luxury-site">
+  <header class="topbar luxury-topbar">
+    <a href="index.html" class="brand">
+      <img src="logo-heavensent.png" alt="Heaven Sent Foundation logo" class="brand-logo" />
+      <span class="brand-text">Heaven Sent Foundation NGO</span>
+    </a>
+    <a class="btn btn-small" href="donate.html">Back To Donation</a>
+  </header>
+
+  <main class="page-shell">
+    <section class="lux-section reveal-lux action-hub">
+      <div class="lux-section-head">
+        <p class="eyebrow">Dummy PayGate</p>
+        <h2>Complete Your Donation</h2>
+      </div>
+
+      <article class="action-panel">
+        <p class="muted">This is a demo payment gateway for testing end-to-end donation flow.</p>
+
+        <div class="calc-output" style="margin-bottom:0.8rem;">
+          <div><p>Donation Amount</p><strong id="pgAmount">R0</strong></div>
+          <div><p>Frequency</p><strong id="pgFrequency">Once-off</strong></div>
+        </div>
+
+        <div class="panel-card" style="margin-bottom:0.8rem;">
+          <p><strong>Purpose:</strong> <span id="pgPurpose">General support</span></p>
+          <p><strong>Donor:</strong> <span id="pgDonor">Anonymous</span></p>
+        </div>
+
+        <form id="dummyPayForm" class="contact-form compact-form">
+          <label>Cardholder Name<input name="cardName" required /></label>
+          <label>Card Number<input name="cardNumber" inputmode="numeric" minlength="16" maxlength="19" placeholder="4242 4242 4242 4242" required /></label>
+          <label>Expiry<input name="expiry" placeholder="MM/YY" minlength="4" maxlength="5" required /></label>
+          <label>CVV<input name="cvv" inputmode="numeric" minlength="3" maxlength="4" required /></label>
+          <button type="submit" class="btn">Pay Now (Dummy)</button>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <script src="site.js?v=20260306-6"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const amount = params.get('amount') || '0';
+    const frequency = params.get('frequency') || 'Once-off';
+    const purpose = params.get('purpose') || 'General program support';
+    const anonymous = params.get('anonymous') === 'yes';
+    const name = params.get('name') || 'Anonymous Donor';
+    const donorName = anonymous ? 'Anonymous Donor' : name;
+
+    document.getElementById('pgAmount').textContent = `R${amount}`;
+    document.getElementById('pgFrequency').textContent = frequency;
+    document.getElementById('pgPurpose').textContent = purpose;
+    document.getElementById('pgDonor').textContent = donorName;
+
+    document.getElementById('dummyPayForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const payButton = event.currentTarget.querySelector('button[type="submit"]');
+      if (payButton) {
+        payButton.disabled = true;
+        payButton.textContent = 'Processing Payment...';
+      }
+
+      if (typeof showPublicLoader === 'function') {
+        showPublicLoader('A child is running to deliver your donation...');
+      }
+
+      const reference = `HSF-${Date.now().toString().slice(-8)}`;
+      const next = new URLSearchParams({ amount, frequency, purpose, name: donorName, anonymous: anonymous ? 'yes' : 'no', reference });
+
+      window.setTimeout(() => {
+        window.location.href = `payment-success.html?${next.toString()}`;
+      }, 1200);
+    });
+  </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heaven Sent Foundation | Donation Successful</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260306-6" />
+  <link rel="stylesheet" href="public-luxury.css?v=20260306-6" />
+</head>
+<body class="site-body luxury-site">
+  <header class="topbar luxury-topbar">
+    <a href="index.html" class="brand">
+      <img src="logo-heavensent.png" alt="Heaven Sent Foundation logo" class="brand-logo" />
+      <span class="brand-text">Heaven Sent Foundation NGO</span>
+    </a>
+    <a class="btn btn-small" href="index.html">Back To Home</a>
+  </header>
+
+  <main class="page-shell">
+    <section class="lux-section reveal-lux action-hub">
+      <div class="lux-section-head">
+        <p class="eyebrow">Donation Complete</p>
+        <h2>Thank You For Supporting Heaven Sent Foundation</h2>
+      </div>
+
+      <article class="action-panel">
+        <p class="muted">This is a successful dummy payment confirmation for testing the full donation process.</p>
+
+        <div class="calc-output" style="margin-bottom: 0.8rem;">
+          <div><p>Amount</p><strong id="successAmount">R0</strong></div>
+          <div><p>Frequency</p><strong id="successFrequency">Once-off</strong></div>
+        </div>
+
+        <div class="panel-card" style="margin-bottom: 0.8rem;">
+          <p><strong>Purpose:</strong> <span id="successPurpose">General support</span></p>
+          <p><strong>Donor:</strong> <span id="successDonor">Anonymous Donor</span></p>
+          <p><strong>Reference:</strong> <span id="successReference">HSF-00000000</span></p>
+        </div>
+
+        <div id="debitOrderSummary" class="panel-card" style="margin-bottom: 0.8rem;" hidden>
+          <p><strong>Payment Method:</strong> Debit Order Signup</p>
+          <p><strong>Bank:</strong> <span id="successBankName">-</span></p>
+          <p><strong>Account Type:</strong> <span id="successAccountType">-</span></p>
+          <p><strong>Account Number:</strong> <span id="successAccountNumber">-</span></p>
+          <p><strong>Branch Code:</strong> <span id="successBranchCode">-</span></p>
+          <p><strong>Debit Day:</strong> <span id="successDebitDay">-</span></p>
+        </div>
+
+        <div class="admin-actions-row">
+          <a class="btn" href="donate.html">Make Another Donation</a>
+          <a class="btn btn-outline" href="impact.html">View Impact</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="site.js?v=20260306-6"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const amount = params.get('amount') || '0';
+    const frequency = params.get('frequency') || 'Once-off';
+    const purpose = params.get('purpose') || 'General program support';
+    const mode = params.get('mode') || 'card';
+    const reference = params.get('reference') || `HSF-${Date.now().toString().slice(-8)}`;
+    const anonymous = params.get('anonymous') === 'yes';
+    const nameParam = params.get('name') || 'Anonymous Donor';
+    const donorName = anonymous ? 'Anonymous Donor' : nameParam;
+
+    document.getElementById('successAmount').textContent = `R${amount}`;
+    document.getElementById('successFrequency').textContent = frequency;
+    document.getElementById('successPurpose').textContent = purpose;
+    document.getElementById('successDonor').textContent = donorName;
+    document.getElementById('successReference').textContent = reference;
+
+    if (mode === 'debit-order') {
+      const debitBox = document.getElementById('debitOrderSummary');
+      const bankName = params.get('bankName') || '-';
+      const accountType = params.get('accountType') || '-';
+      const accountNumber = params.get('accountNumber') || '-';
+      const branchCode = params.get('branchCode') || '-';
+      const debitDay = params.get('debitDay') || '-';
+
+      if (debitBox) debitBox.hidden = false;
+      document.getElementById('successBankName').textContent = bankName;
+      document.getElementById('successAccountType').textContent = accountType;
+      document.getElementById('successAccountNumber').textContent = accountNumber;
+      document.getElementById('successBranchCode').textContent = branchCode;
+      document.getElementById('successDebitDay').textContent = debitDay;
+    }
+  </script>
+</body>
+</html>
+
+
