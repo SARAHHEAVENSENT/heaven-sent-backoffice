@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Metric {
+  key   String @id
+  value Int
+  @@map("metrics")
+}
+
+model Action {
+  id        Int      @id @default(autoincrement())
+  type      String
+  createdAt DateTime
+  @@map("actions")
+}
+
+model Interaction {
+  id       Int    @id @default(autoincrement())
+  date     String
+  name     String
+  email    String
+  interest String
+  message  String
+  @@map("interactions")
+}
+
+model Kpi {
+  id                  Int      @id
+  kitsDistributed     Int
+  beneficiariesServed Int
+  schoolPartners      Int
+  updatedAt           DateTime
+  @@map("kpis")
+}
+
+model TeamMember {
+  id        Int      @id @default(autoincrement())
+  name      String
+  role      String
+  bio       String
+  photoUrl  String
+  sortOrder Int      @default(0)
+  updatedAt DateTime
+  @@map("team_members")
+}
+
+model GalleryItem {
+  id        Int      @id @default(autoincrement())
+  imageUrl  String
+  caption   String
+  altText   String
+  sortOrder Int      @default(0)
+  updatedAt DateTime
+  @@map("gallery_items")
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  fullName     String
+  username     String    @unique
+  passwordHash String
+  role         String    @default("member")
+  isActive     Boolean   @default(true)
+  lastLogin    DateTime?
+  updatedAt    DateTime
+  @@map("users")
+}
+
+model InventoryTransaction {
+  id         Int      @id @default(autoincrement())
+  itemName   String
+  category   String
+  quantity   Int
+  direction  String
+  note       String
+  recordedBy String
+  createdAt  DateTime
+  @@map("inventory_transactions")
+}
