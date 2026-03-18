@@ -22,6 +22,16 @@ try {
   currentUser = null;
 }
 
+function handleUnauthorized() {
+  sessionStorage.removeItem('hsf_token');
+  sessionStorage.removeItem('hsf_user');
+  token = '';
+  currentUser = null;
+  if (document.body.classList.contains('admin-body')) {
+    buildLogin();
+  }
+}
+
 const adminContentState = { team: [], gallery: [], users: [] };
 const publicLoaderCaptions = [
   'Preparing a dignified experience for every visitor.',
@@ -48,6 +58,9 @@ async function req(path, opt = {}, auth = false) {
   const contentType = String(response.headers.get('content-type') || '').toLowerCase();
 
   if (!response.ok) {
+    if (response.status === 401) {
+      handleUnauthorized();
+    }
     const err = contentType.includes('application/json') ? await response.json().catch(() => null) : null;
 
     if (response.status === 404) {
@@ -995,7 +1008,15 @@ function bindPublicActions() {
     button.addEventListener('click', async (event) => {
       const href = button.getAttribute('href');
       const shouldNavigate = button.tagName === 'A' && href && !href.startsWith('#');
-      if (shouldNavigate) event.preventDefault();
+      if (shouldNavigate) {
+        event.preventDefault();
+        req('/public/action', {
+          method: 'POST',
+          body: JSON.stringify({ type: button.dataset.action })
+        }).catch(() => {});
+        window.location.href = href;
+        return;
+      }
 
       try {
         await req('/public/action', {
@@ -1005,8 +1026,6 @@ function bindPublicActions() {
         await loadPublic();
       } catch {
         // keep UX smooth even if tracking fails
-      } finally {
-        if (shouldNavigate) window.location.href = href;
       }
     });
   });
@@ -2026,6 +2045,17 @@ function bindAdmin() {
     kpiForm.addEventListener('submit', async (event) => {
       event.preventDefault();
       const data = new FormData(kpiForm);
+      const parsed = {
+        kitsDistributed: Number(data.get('kitsDistributed')),
+        beneficiariesServed: Number(data.get('beneficiariesServed')),
+        schoolPartners: Number(data.get('schoolPartners'))
+      };
+
+      const invalid = Object.values(parsed).some((value) => !Number.isFinite(value) || value < 0 || value > 1000000);
+      if (invalid) {
+        alert('Please enter realistic whole numbers (0 - 1,000,000).');
+        return;
+      }
 
       try {
         await req(
@@ -2033,9 +2063,9 @@ function bindAdmin() {
           {
             method: 'PUT',
             body: JSON.stringify({
-              kitsDistributed: data.get('kitsDistributed'),
-              beneficiariesServed: data.get('beneficiariesServed'),
-              schoolPartners: data.get('schoolPartners')
+              kitsDistributed: parsed.kitsDistributed,
+              beneficiariesServed: parsed.beneficiariesServed,
+              schoolPartners: parsed.schoolPartners
             })
           },
           true
